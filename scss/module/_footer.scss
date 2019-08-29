@@ -1,0 +1,209 @@
+.footer{
+    color: #{nth($colors, 10)};
+    background-color: #{nth($colors, 7)};
+    margin-top: 6rem;
+    padding-bottom: 2.7rem;
+
+    .inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        }
+
+
+    &-left{
+        padding-top: 2.8rem;
+        margin-left: 4.2rem;
+        margin-right: 2.5rem;
+
+        @include mq ('tab'){
+            width: 100%;}
+
+        @include mq ('sp'){
+                display: none;
+        }
+
+    }
+
+    &-list{
+        @include mq ('tab'){
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &-item{
+        padding: 1.4rem 0 .9rem 0;
+        position: relative;
+        transition: all 0.5s;
+        pointer-events: none;
+        border-bottom: .5rem solid #{nth($colors, 7)};
+
+       &:hover{
+        border-bottom: .5rem solid #{nth($colors, 1)};
+       }
+
+            a{
+                @include link-cover();
+            }
+    }
+
+
+
+
+    &-center{
+        padding-top: 4.5rem;
+        @include mq ('sp'){
+            width: 100%;
+        }
+
+    }
+
+    &-address{
+        padding-bottom: 1.2rem;
+        padding-left: 3.3rem;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 23px;
+            height: 35px;
+            background-image: url(../../img/pin.png);
+            background-size: 100%;
+            bottom:2px;
+            left:0;
+
+        }
+    }
+
+    &-map{
+        background-color: antiquewhite;
+        width: 400px;
+        height: 225px;
+
+        @include mq ('sp'){
+            width: 100%;
+        }
+
+    }
+
+    &-source{
+        width: 100%;
+    }
+    
+    &-right{
+        padding-top: 3rem;
+
+        @include mq ('sp'){
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &-logo{
+        width: 100%;
+        margin-bottom: 17.3rem;
+        max-width: 250px;
+        @include mq ('tab'){
+            margin-bottom: 1rem;}
+
+    }
+
+    &-icons{
+        text-align: right;
+    }
+
+    &-icon{
+        margin-right: 2.2rem;
+        position: relative;
+        transition: all 0.5s;
+        pointer-events: none;
+        cursor: pointer;
+        transition: all .5s;
+
+        &:hover{
+            color: #{nth($colors, 3)};
+        }
+
+            a{
+                @include link-cover();
+            }
+    }
+
+
+    &-bottom{
+        padding-top: 6.3rem;
+        text-align: right;
+        width: 100%;
+
+        @include mq ('tab'){
+            padding-top: 2rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+    }
+
+    &-copyright{
+        @include mq ('sp'){
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    &-privacy{
+        position: relative;
+        transition: all 0.5s;
+        pointer-events: none;
+        cursor: pointer;
+
+            a{
+                @include link-cover();
+            }
+    }
+
+    &-tos{
+        position: relative;
+        transition: all 0.5s;
+        pointer-events: none;
+        cursor: pointer;
+        
+
+            a{
+                @include link-cover();
+            }
+    }
+
+    &-icon{
+        font-size: 3rem;
+    }
+
+    &-backtop{
+        position: absolute;
+        background-color: #{nth($colors, 7)};
+        width: 13.1rem;
+        text-align: center;
+        line-height: 4.3rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.08;
+        font-weight: bold;
+        top:-4.3rem;
+        right: 0;
+        cursor: pointer;
+        transition: all .5s;
+        
+        &:hover{
+            top:-4.7rem;
+        }
+
+        }
+    }
+
+
+

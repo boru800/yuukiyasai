@@ -1,0 +1,48 @@
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  color: #{nth($colors, 4)};
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+  background-color: #{nth($colors, 1)};
+  font-size: 1.6rem;
+}
+
+
+li{
+  list-style: none;
+  font-size: 1.8rem;;
+}
+
+//PC
+@media print,screen and (min-width: #{$layout-width-inner}){
+  body{
+    width: 100%;
+  }
+}
+
+//tab
+@media screen and (max-width: 1099px){
+  body{
+    min-width: 320px;
+  }
+  html, body{
+    height: 100%;
+    min-height: 100%;
+    font-size: 55%;
+  }
+}
+
+//SP
+@media screen and (max-width: 767px){
+  body{
+    min-width: 320px;
+  }
+  html, body{
+    height: 100%;
+    min-height: 100%;
+    font-size: 55%;
+  }
+}
